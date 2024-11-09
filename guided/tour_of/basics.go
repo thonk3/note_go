@@ -38,10 +38,24 @@ func main() {
 	fmt.Println(cpp, chash)
 
 	// short hand var declaration only in a func
-	// := also set type, cannot beused outside a func
+	// := also infered type, cannot beused outside a func
 	// on package level, every statement begins with a keyword
-	k := 3
-	fmt.Println(k)
+	k := 3            // int
+	m := 3.14         // float64
+	n := 0.123 + 0.5i // complex128
+	fmt.Println(k, m, n)
+
+	// zero values
+	// var declared without initial value are given zero value
+	// 0 numeric
+	// false for boolean
+	// "" for empty string
+
+	// T(v) to convert value of v into type T
+
+	// cannot be declared using :=
+	const egg = "egg"
+	fmt.Println(egg)
 }
 
 // functions seems self expolanatory
@@ -69,4 +83,22 @@ func split(sum int) (x, y int) {
 /*
 	Every go program made up of packages
 	Program start running in package main
+*/
+
+/* basic types
+bool
+
+string
+
+int  int8  int16  int32  int64
+uint uint8 uint16 uint32 uint64 uintptr
+
+byte // alias for uint8
+
+rune // alias for int32
+     // represents a Unicode code point
+
+float32 float64
+
+complex64 complex128
 */
